@@ -1,0 +1,411 @@
+{
+  "base_link": "torso_link",
+  "feet": {
+    "l_ankle_x_link": {
+      "link_origin_in_base_xyz": [
+        -0.031627493,
+        0.136,
+        -1.014522638
+      ],
+      "mesh_min_z_in_base": -1.0555226389306538,
+      "mesh_max_z_in_base": -1.0010226374479883,
+      "root_z_for_mesh_bottom_on_ground": 1.0555226389306538,
+      "chain": [
+        {
+          "joint": "waist_y_joint",
+          "parent": "torso_link",
+          "child": "waist_y_link",
+          "q": 0.0,
+          "xyz": [
+            0.0,
+            0.0,
+            -0.2265
+          ],
+          "rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "joint": "waist_x_joint",
+          "parent": "waist_y_link",
+          "child": "waist_x_link",
+          "q": 0.0,
+          "xyz": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "joint": "waist_z_joint",
+          "parent": "waist_x_link",
+          "child": "waist_z_link",
+          "q": 0.0,
+          "xyz": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "joint": "l_hip_y_joint",
+          "parent": "waist_z_link",
+          "child": "l_hip_y_link",
+          "q": -0.1,
+          "xyz": [
+            0.0,
+            0.136,
+            -0.156
+          ],
+          "rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "joint": "l_hip_x_joint",
+          "parent": "l_hip_y_link",
+          "child": "l_hip_x_link",
+          "q": 0.0,
+          "xyz": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "joint": "l_hip_z_joint",
+          "parent": "l_hip_x_link",
+          "child": "l_hip_z_link",
+          "q": 0.0,
+          "xyz": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "joint": "l_knee_y_joint",
+          "parent": "l_hip_z_link",
+          "child": "l_knee_y_link",
+          "q": 0.3,
+          "xyz": [
+            0.0,
+            0.0,
+            -0.32
+          ],
+          "rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "joint": "l_ankle_y_joint",
+          "parent": "l_knee_y_link",
+          "child": "l_ankle_y_link",
+          "q": -0.2,
+          "xyz": [
+            0.0,
+            0.0,
+            -0.32
+          ],
+          "rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "joint": "l_ankle_x_joint",
+          "parent": "l_ankle_y_link",
+          "child": "l_ankle_x_link",
+          "q": 0.0,
+          "xyz": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    "r_ankle_x_link": {
+      "link_origin_in_base_xyz": [
+        -0.031627493,
+        -0.136,
+        -1.014522638
+      ],
+      "mesh_min_z_in_base": -1.0555226389306538,
+      "mesh_max_z_in_base": -1.0010226374479883,
+      "root_z_for_mesh_bottom_on_ground": 1.0555226389306538,
+      "chain": [
+        {
+          "joint": "waist_y_joint",
+          "parent": "torso_link",
+          "child": "waist_y_link",
+          "q": 0.0,
+          "xyz": [
+            0.0,
+            0.0,
+            -0.2265
+          ],
+          "rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "joint": "waist_x_joint",
+          "parent": "waist_y_link",
+          "child": "waist_x_link",
+          "q": 0.0,
+          "xyz": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "joint": "waist_z_joint",
+          "parent": "waist_x_link",
+          "child": "waist_z_link",
+          "q": 0.0,
+          "xyz": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "joint": "r_hip_y_joint",
+          "parent": "waist_z_link",
+          "child": "r_hip_y_link",
+          "q": -0.1,
+          "xyz": [
+            0.0,
+            -0.136,
+            -0.156
+          ],
+          "rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "joint": "r_hip_x_joint",
+          "parent": "r_hip_y_link",
+          "child": "r_hip_x_link",
+          "q": 0.0,
+          "xyz": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "joint": "r_hip_z_joint",
+          "parent": "r_hip_x_link",
+          "child": "r_hip_z_link",
+          "q": 0.0,
+          "xyz": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "joint": "r_knee_y_joint",
+          "parent": "r_hip_z_link",
+          "child": "r_knee_y_link",
+          "q": 0.3,
+          "xyz": [
+            0.0,
+            0.0,
+            -0.32
+          ],
+          "rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "joint": "r_ankle_y_joint",
+          "parent": "r_knee_y_link",
+          "child": "r_ankle_y_link",
+          "q": -0.2,
+          "xyz": [
+            0.0,
+            0.0,
+            -0.32
+          ],
+          "rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "joint": "r_ankle_x_joint",
+          "parent": "r_ankle_y_link",
+          "child": "r_ankle_x_link",
+          "q": 0.0,
+          "xyz": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    }
+  },
+  "recommended_root_z_from_geometry": 1.0555226389306538,
+  "configured_init_root_z": 0.82,
+  "configured_base_height_target": 0.82,
+  "difference_recommended_minus_configured": 0.23552263893065384
+}

@@ -1,0 +1,86 @@
+legged_gym/legged_gym/envs/base/legged_robot.py:91:        self.height_samples = None
+legged_gym/legged_gym/envs/base/legged_robot.py:102:        self.actor_use_height = True if self.num_obs > self.actor_proprioceptive_obs_length else False
+legged_gym/legged_gym/envs/base/legged_robot.py:193:        feet_height, feet_height_var = self._get_feet_heights()
+legged_gym/legged_gym/envs/base/legged_robot.py:194:        self.feet_max_height = torch.maximum(self.feet_max_height, feet_height)
+legged_gym/legged_gym/envs/base/legged_robot.py:217:        self.feet_max_height *= ~self.contact_filt
+legged_gym/legged_gym/envs/base/legged_robot.py:288:            # self.extras["episode"]["height_curriculum_ratio"] = self.height_curriculum_ratio
+legged_gym/legged_gym/envs/base/legged_robot.py:324:                                    self.commands[:, 4].unsqueeze(1),
+legged_gym/legged_gym/envs/base/legged_robot.py:344:                                    self.commands[:, 4].unsqueeze(1),
+legged_gym/legged_gym/envs/base/legged_robot.py:371:        self.camera_params.height = self.cfg.camera.height
+legged_gym/legged_gym/envs/base/legged_robot.py:513:            Default behaviour: Compute ang vel command based on target and heading, compute measured terrain heights and randomly push robots
+legged_gym/legged_gym/envs/base/legged_robot.py:528:        if getattr(self.cfg.commands, "independent_height_velocity_sampling", False):
+legged_gym/legged_gym/envs/base/legged_robot.py:529:            is_height = torch.rand(len(env_ids), 1, device=self.device) < 0.5
+legged_gym/legged_gym/envs/base/legged_robot.py:533:            is_height = sample < 1/3
+legged_gym/legged_gym/envs/base/legged_robot.py:551:        self.commands[env_ids, 4] = (torch_rand_float(self.command_ranges["height"][0], self.command_ranges["height"][1], (len(env_ids), 1), device=self.device) * is_height).squeeze(1) + self.cfg.rewards.base_height_target
+legged_gym/legged_gym/envs/base/legged_robot.py:733:        self.feet_max_height = torch.zeros(self.num_envs, self.feet_indices.shape[0], dtype=torch.float, device=self.device, requires_grad=False)
+legged_gym/legged_gym/envs/base/legged_robot.py:763:        self.target_heights = torch.ones((self.num_envs), device=self.device) * self.cfg.rewards.base_height_target
+legged_gym/legged_gym/envs/base/legged_robot.py:1051:    def _get_feet_heights(self, env_ids=None):
+legged_gym/legged_gym/envs/base/legged_robot.py:1052:        """ Samples heights of the terrain at required points around each robot.
+legged_gym/legged_gym/envs/base/legged_robot.py:1056:            env_ids (List[int], optional): Subset of environments for which to return the heights. Defaults to None.
+legged_gym/legged_gym/envs/base/legged_robot.py:1067:            left_foot_height = torch.mean(left_foot_pos[:, :, 2], dim = -1, keepdim=True)
+legged_gym/legged_gym/envs/base/legged_robot.py:1068:            left_foot_height_var = torch.var(left_foot_pos[:, :, 2], dim = -1, keepdim=True, unbiased=False)
+legged_gym/legged_gym/envs/base/legged_robot.py:1069:            right_foot_height = torch.mean(right_foot_pos[:, :, 2], dim = -1, keepdim=True)
+legged_gym/legged_gym/envs/base/legged_robot.py:1070:            right_foot_height_var = torch.var(right_foot_pos[:, :, 2], dim = -1, keepdim=True, unbiased=False)
+legged_gym/legged_gym/envs/base/legged_robot.py:1071:            return torch.cat((left_foot_height, right_foot_height), dim=-1), torch.cat((left_foot_height_var, right_foot_height_var), dim=-1)
+legged_gym/legged_gym/envs/base/legged_robot.py:1073:            raise NameError("Can't measure height with terrain mesh type 'none'")
+legged_gym/legged_gym/envs/base/legged_robot.py:1090:        left_px = torch.clip(left_px, 0, self.height_samples.shape[0]-2)
+legged_gym/legged_gym/envs/base/legged_robot.py:1091:        right_px = torch.clip(right_px, 0, self.height_samples.shape[0]-2)
+legged_gym/legged_gym/envs/base/legged_robot.py:1092:        left_py = torch.clip(left_py, 0, self.height_samples.shape[1]-2)
+legged_gym/legged_gym/envs/base/legged_robot.py:1093:        right_py = torch.clip(right_py, 0, self.height_samples.shape[1]-2)
+legged_gym/legged_gym/envs/base/legged_robot.py:1095:        left_heights1 = self.height_samples[left_px, left_py]
+legged_gym/legged_gym/envs/base/legged_robot.py:1096:        left_heights2 = self.height_samples[left_px+1, left_py]
+legged_gym/legged_gym/envs/base/legged_robot.py:1097:        left_heights3 = self.height_samples[left_px, left_py+1]
+legged_gym/legged_gym/envs/base/legged_robot.py:1098:        left_heights = torch.min(left_heights1, left_heights2)
+legged_gym/legged_gym/envs/base/legged_robot.py:1099:        left_heights = torch.min(left_heights, left_heights3)
+legged_gym/legged_gym/envs/base/legged_robot.py:1100:        left_heights = left_heights.view(self.num_envs, -1) * self.terrain.cfg.vertical_scale
+legged_gym/legged_gym/envs/base/legged_robot.py:1101:        left_foot_heights =  left_foot_pos[:, :, 2] - left_heights
+legged_gym/legged_gym/envs/base/legged_robot.py:1103:        right_heights1 = self.height_samples[right_px, right_py]
+legged_gym/legged_gym/envs/base/legged_robot.py:1104:        right_heights2 = self.height_samples[right_px+1, right_py]
+legged_gym/legged_gym/envs/base/legged_robot.py:1105:        right_heights3 = self.height_samples[right_px, right_py+1]
+legged_gym/legged_gym/envs/base/legged_robot.py:1106:        right_heights = torch.min(right_heights1, right_heights2)
+legged_gym/legged_gym/envs/base/legged_robot.py:1107:        right_heights = torch.min(right_heights, right_heights3)
+legged_gym/legged_gym/envs/base/legged_robot.py:1108:        right_heights = right_heights.view(self.num_envs, -1) * self.terrain.cfg.vertical_scale
+legged_gym/legged_gym/envs/base/legged_robot.py:1109:        right_foot_heights =  right_foot_pos[:, :, 2] - right_heights
+legged_gym/legged_gym/envs/base/legged_robot.py:1111:        feet_heights = torch.cat((torch.mean(left_foot_heights, dim=-1, keepdim=True), torch.mean(right_foot_heights, dim=-1, keepdim=True)), dim=-1)
+legged_gym/legged_gym/envs/base/legged_robot.py:1112:        feet_heights_var = torch.cat((torch.var(left_foot_heights, dim=-1, keepdim=True, unbiased=False), torch.var(right_foot_heights, dim=-1, keepdim=True, unbiased=False)), dim=-1)
+legged_gym/legged_gym/envs/base/legged_robot.py:1114:        return torch.clip(feet_heights, min=0.), feet_heights_var
+legged_gym/legged_gym/envs/base/legged_robot.py:1136:        threshold = getattr(self.cfg.rewards, "crouch_height_threshold", self.cfg.rewards.base_height_target)
+legged_gym/legged_gym/envs/base/legged_robot.py:1137:        return self.commands[:, 4] < threshold
+legged_gym/legged_gym/envs/base/legged_robot.py:1140:        # Penalize z axis base linear velocity at every commanded height
+legged_gym/legged_gym/envs/base/legged_robot.py:1155:    def _reward_tracking_base_height(self):
+legged_gym/legged_gym/envs/base/legged_robot.py:1156:        base_height_l = self.root_states[:, 2] - self.feet_pos[:, 0, 2]
+legged_gym/legged_gym/envs/base/legged_robot.py:1157:        base_height_r = self.root_states[:, 2] - self.feet_pos[:, 1, 2]
+legged_gym/legged_gym/envs/base/legged_robot.py:1158:        base_height = torch.max(base_height_l, base_height_r) + self.cfg.asset.ankle_sole_distance
+legged_gym/legged_gym/envs/base/legged_robot.py:1159:        height_error = torch.abs(base_height - self.commands[:, 4])
+legged_gym/legged_gym/envs/base/legged_robot.py:1160:        return torch.exp(-height_error * 4)
+legged_gym/legged_gym/envs/base/legged_robot.py:1169:        height_error = (self.root_states[:, 2] - self.commands[:, 4])
+legged_gym/legged_gym/envs/base/legged_robot.py:1173:        return torch.sum(torch.abs((joint_deviation-0.5) * height_error.unsqueeze(-1)), dim=-1)
+legged_gym/legged_gym/envs/base/legged_robot.py:1197:        feet_height, feet_height_var = self._get_feet_heights()
+legged_gym/legged_gym/envs/base/legged_robot.py:1198:        height_error = torch.square(feet_height - self.cfg.rewards.clearance_height_target).view(self.num_envs, -1)
+legged_gym/legged_gym/envs/base/legged_robot.py:1200:        return torch.sum(height_error * feet_leteral_vel, dim=1) * ~self._is_crouching()
+legged_gym/legged_gym/envs/base/legged_robot.py:1221:        feet_heights, feet_heights_var = self._get_feet_heights()
+legged_gym/legged_gym/envs/base/legged_robot.py:1223:        return torch.sum(feet_heights_var * continue_contact, dim=1)
+legged_gym/legged_gym/envs/base/legged_robot_config.py:44:        env_spacing = 3.  # not used with heightfields/trimeshes 
+legged_gym/legged_gym/envs/base/legged_robot_config.py:49:        mesh_type = 'trimesh' # "heightfield" # none, plane, heightfield or trimesh
+legged_gym/legged_gym/envs/base/legged_robot_config.py:58:        measure_heights = True
+legged_gym/legged_gym/envs/base/legged_robot_config.py:76:        num_commands = 4 # default: lin_vel_x, lin_vel_y, ang_vel_yaw, heading (in heading mode ang_vel_yaw is recomputed from heading error)
+legged_gym/legged_gym/envs/base/legged_robot_config.py:183:            base_height = -0. 
+legged_gym/legged_gym/envs/base/legged_robot_config.py:195:        base_height_target = 1.
+legged_gym/legged_gym/envs/base/legged_robot_config.py:197:        clearance_height_target = 0.09
+legged_gym/legged_gym/envs/base/legged_robot_config.py:207:            height_measurements = 5.0
+legged_gym/legged_gym/envs/base/legged_robot_config.py:220:            height_measurements = 0.1
+legged_gym/legged_gym/envs/g1/elf3_dof31_config.py:85:        independent_height_velocity_sampling = True
+legged_gym/legged_gym/envs/g1/elf3_dof31_config.py:93:            height = [-0.18, 0.0]
+legged_gym/legged_gym/envs/g1/elf3_dof31_config.py:180:            tracking_base_height = 2.0
+legged_gym/legged_gym/envs/g1/elf3_dof31_config.py:212:        base_height_target = 0.82
+legged_gym/legged_gym/envs/g1/elf3_dof31_config.py:213:        crouch_height_threshold = 0.73
+legged_gym/legged_gym/envs/g1/elf3_dof31_config.py:220:        clearance_height_target = 0.10
+legged_gym/legged_gym/envs/g1/elf3_dof31_config.py:240:        measure_heights = False
+legged_gym/legged_gym/envs/g1/elf3_dof31_config.py:252:            height_measurements = 0.1
+legged_gym/legged_gym/envs/g1/g1_29dof_config.py:121:        num_commands = 5 # lin_vel_x, lin_vel_y, ang_vel_yaw, heading, height, orientation
+legged_gym/legged_gym/envs/g1/g1_29dof_config.py:130:            height = [-0.5, 0.0]
+legged_gym/legged_gym/envs/g1/g1_29dof_config.py:213:            tracking_base_height = 2.
+legged_gym/legged_gym/envs/g1/g1_29dof_config.py:244:        base_height_target = 0.74
+legged_gym/legged_gym/envs/g1/g1_29dof_config.py:251:        clearance_height_target = 0.14
+legged_gym/legged_gym/envs/g1/g1_29dof_config.py:264:        env_spacing = 3.  # not used with heightfields/trimeshes 
+legged_gym/legged_gym/envs/g1/g1_29dof_config.py:280:            height_measurement = 0.1

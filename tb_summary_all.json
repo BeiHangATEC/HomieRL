@@ -1,0 +1,778 @@
+{
+  "Aug04_20-49-52_elf3_crouch_v2": {
+    "Episode/rew_action_rate": {
+      "final_val": -0.3267,
+      "latest_10_avg": -0.3268
+    },
+    "Episode/rew_action_vanish": {
+      "final_val": -0.3697,
+      "latest_10_avg": -0.3757
+    },
+    "Episode/rew_ang_vel_xy": {
+      "final_val": -0.479,
+      "latest_10_avg": -0.4752
+    },
+    "Episode/rew_contact_momentum": {
+      "final_val": -0.0128,
+      "latest_10_avg": -0.0126
+    },
+    "Episode/rew_deviation_ankle_joint": {
+      "final_val": -0.0098,
+      "latest_10_avg": -0.0099
+    },
+    "Episode/rew_deviation_hip_joint": {
+      "final_val": -0.0809,
+      "latest_10_avg": -0.0825
+    },
+    "Episode/rew_dof_acc": {
+      "final_val": -0.4667,
+      "latest_10_avg": -0.465
+    },
+    "Episode/rew_dof_pos_limits": {
+      "final_val": -0.0084,
+      "latest_10_avg": -0.008
+    },
+    "Episode/rew_dof_vel": {
+      "final_val": -0.0246,
+      "latest_10_avg": -0.0244
+    },
+    "Episode/rew_dof_vel_limits": {
+      "final_val": -0.0002,
+      "latest_10_avg": -0.0002
+    },
+    "Episode/rew_feet_air_time": {
+      "final_val": -0.0007,
+      "latest_10_avg": -0.0007
+    },
+    "Episode/rew_feet_clearance": {
+      "final_val": -0.0012,
+      "latest_10_avg": -0.0012
+    },
+    "Episode/rew_feet_contact_forces": {
+      "final_val": -0.0169,
+      "latest_10_avg": -0.0167
+    },
+    "Episode/rew_feet_distance_lateral": {
+      "final_val": -0.02,
+      "latest_10_avg": -0.0205
+    },
+    "Episode/rew_feet_ground_parallel": {
+      "final_val": 0.0,
+      "latest_10_avg": 0.0
+    },
+    "Episode/rew_feet_parallel": {
+      "final_val": 0.0,
+      "latest_10_avg": 0.0
+    },
+    "Episode/rew_feet_slip": {
+      "final_val": -0.3752,
+      "latest_10_avg": -0.37
+    },
+    "Episode/rew_feet_stumble": {
+      "final_val": -0.0006,
+      "latest_10_avg": -0.0005
+    },
+    "Episode/rew_joint_power": {
+      "final_val": -0.1472,
+      "latest_10_avg": -0.1466
+    },
+    "Episode/rew_joint_tracking_error": {
+      "final_val": -0.1505,
+      "latest_10_avg": -0.1497
+    },
+    "Episode/rew_knee_distance_lateral": {
+      "final_val": -0.0002,
+      "latest_10_avg": -0.0002
+    },
+    "Episode/rew_lin_vel_z": {
+      "final_val": -0.1514,
+      "latest_10_avg": -0.1483
+    },
+    "Episode/rew_no_fly": {
+      "final_val": 0.6005,
+      "latest_10_avg": 0.6078
+    },
+    "Episode/rew_orientation": {
+      "final_val": -0.3857,
+      "latest_10_avg": -0.3807
+    },
+    "Episode/rew_smoothness": {
+      "final_val": -2.1774,
+      "latest_10_avg": -2.1786
+    },
+    "Episode/rew_stand_still": {
+      "final_val": -0.0356,
+      "latest_10_avg": -0.0371
+    },
+    "Episode/rew_termination": {
+      "final_val": -0.0338,
+      "latest_10_avg": -0.0329
+    },
+    "Episode/rew_torque_limits": {
+      "final_val": -0.0373,
+      "latest_10_avg": -0.0375
+    },
+    "Episode/rew_torques": {
+      "final_val": -0.0,
+      "latest_10_avg": -0.0
+    },
+    "Episode/rew_tracking_ang_vel": {
+      "final_val": 1.3079,
+      "latest_10_avg": 1.3121
+    },
+    "Episode/rew_tracking_base_height": {
+      "final_val": 3.2051,
+      "latest_10_avg": 3.2028
+    },
+    "Episode/rew_tracking_x_vel": {
+      "final_val": 1.4471,
+      "latest_10_avg": 1.4642
+    },
+    "Episode/rew_tracking_y_vel": {
+      "final_val": 1.6141,
+      "latest_10_avg": 1.6092
+    },
+    "Loss/value_function": {
+      "final_val": 0.2022,
+      "latest_10_avg": 0.2035
+    },
+    "Loss/surrogate": {
+      "final_val": 0.2741,
+      "latest_10_avg": 0.2759
+    },
+    "Loss/Estimation Loss": {
+      "final_val": 0.0666,
+      "latest_10_avg": 0.0677
+    },
+    "Loss/Swap Loss": {
+      "final_val": 0.0603,
+      "latest_10_avg": 0.0603
+    },
+    "Loss/Actor Sym Loss": {
+      "final_val": 0.0,
+      "latest_10_avg": 0.0
+    },
+    "Loss/Critic Sym Loss": {
+      "final_val": 0.0,
+      "latest_10_avg": 0.0
+    },
+    "Loss/learning_rate": {
+      "final_val": 0.0,
+      "latest_10_avg": 0.0
+    },
+    "Policy/mean_noise_std": {
+      "final_val": 1.0594,
+      "latest_10_avg": 1.0594
+    },
+    "Perf/total_fps": {
+      "final_val": 77804.0,
+      "latest_10_avg": 78066.0
+    },
+    "Perf/collection time": {
+      "final_val": 2.0406,
+      "latest_10_avg": 2.0342
+    },
+    "Perf/learning_time": {
+      "final_val": 0.5916,
+      "latest_10_avg": 0.5893
+    },
+    "Train/mean_reward": {
+      "final_val": 5.285,
+      "latest_10_avg": 5.0674
+    },
+    "Train/mean_episode_length": {
+      "final_val": 79.12,
+      "latest_10_avg": 77.28
+    },
+    "Train/mean_reward/time": {
+      "final_val": 5.285,
+      "latest_10_avg": 5.0674
+    },
+    "Train/mean_episode_length/time": {
+      "final_val": 79.12,
+      "latest_10_avg": 77.28
+    }
+  },
+  "Aug04_22-34-41_elf3_crouch_v2": {
+    "Episode/rew_action_rate": {
+      "final_val": -0.3293,
+      "latest_10_avg": -0.329
+    },
+    "Episode/rew_action_vanish": {
+      "final_val": -0.3834,
+      "latest_10_avg": -0.3774
+    },
+    "Episode/rew_ang_vel_xy": {
+      "final_val": -0.4757,
+      "latest_10_avg": -0.4736
+    },
+    "Episode/rew_contact_momentum": {
+      "final_val": -0.0125,
+      "latest_10_avg": -0.0126
+    },
+    "Episode/rew_deviation_ankle_joint": {
+      "final_val": -0.01,
+      "latest_10_avg": -0.01
+    },
+    "Episode/rew_deviation_hip_joint": {
+      "final_val": -0.0849,
+      "latest_10_avg": -0.0853
+    },
+    "Episode/rew_dof_acc": {
+      "final_val": -0.4713,
+      "latest_10_avg": -0.4702
+    },
+    "Episode/rew_dof_pos_limits": {
+      "final_val": -0.0076,
+      "latest_10_avg": -0.0078
+    },
+    "Episode/rew_dof_vel": {
+      "final_val": -0.0247,
+      "latest_10_avg": -0.0247
+    },
+    "Episode/rew_dof_vel_limits": {
+      "final_val": -0.0002,
+      "latest_10_avg": -0.0002
+    },
+    "Episode/rew_feet_air_time": {
+      "final_val": -0.0006,
+      "latest_10_avg": -0.0007
+    },
+    "Episode/rew_feet_clearance": {
+      "final_val": -0.0011,
+      "latest_10_avg": -0.0012
+    },
+    "Episode/rew_feet_contact_forces": {
+      "final_val": -0.0168,
+      "latest_10_avg": -0.0169
+    },
+    "Episode/rew_feet_distance_lateral": {
+      "final_val": -0.022,
+      "latest_10_avg": -0.0215
+    },
+    "Episode/rew_feet_ground_parallel": {
+      "final_val": 0.0,
+      "latest_10_avg": 0.0
+    },
+    "Episode/rew_feet_parallel": {
+      "final_val": 0.0,
+      "latest_10_avg": 0.0
+    },
+    "Episode/rew_feet_slip": {
+      "final_val": -0.3657,
+      "latest_10_avg": -0.368
+    },
+    "Episode/rew_feet_stumble": {
+      "final_val": -0.0005,
+      "latest_10_avg": -0.0005
+    },
+    "Episode/rew_joint_power": {
+      "final_val": -0.1489,
+      "latest_10_avg": -0.1492
+    },
+    "Episode/rew_joint_tracking_error": {
+      "final_val": -0.1517,
+      "latest_10_avg": -0.1529
+    },
+    "Episode/rew_knee_distance_lateral": {
+      "final_val": -0.0005,
+      "latest_10_avg": -0.0004
+    },
+    "Episode/rew_lin_vel_z": {
+      "final_val": -0.1552,
+      "latest_10_avg": -0.1549
+    },
+    "Episode/rew_no_fly": {
+      "final_val": 0.6101,
+      "latest_10_avg": 0.6092
+    },
+    "Episode/rew_orientation": {
+      "final_val": -0.384,
+      "latest_10_avg": -0.3863
+    },
+    "Episode/rew_smoothness": {
+      "final_val": -2.1957,
+      "latest_10_avg": -2.1905
+    },
+    "Episode/rew_stand_still": {
+      "final_val": -0.0381,
+      "latest_10_avg": -0.0377
+    },
+    "Episode/rew_termination": {
+      "final_val": -0.033,
+      "latest_10_avg": -0.0328
+    },
+    "Episode/rew_torque_limits": {
+      "final_val": -0.0403,
+      "latest_10_avg": -0.0408
+    },
+    "Episode/rew_torques": {
+      "final_val": -0.0,
+      "latest_10_avg": -0.0
+    },
+    "Episode/rew_tracking_ang_vel": {
+      "final_val": 1.3021,
+      "latest_10_avg": 1.3027
+    },
+    "Episode/rew_tracking_base_height": {
+      "final_val": 3.2216,
+      "latest_10_avg": 3.2206
+    },
+    "Episode/rew_tracking_x_vel": {
+      "final_val": 1.4741,
+      "latest_10_avg": 1.4956
+    },
+    "Episode/rew_tracking_y_vel": {
+      "final_val": 1.6084,
+      "latest_10_avg": 1.605
+    },
+    "Loss/value_function": {
+      "final_val": 0.2061,
+      "latest_10_avg": 0.2065
+    },
+    "Loss/surrogate": {
+      "final_val": 0.2749,
+      "latest_10_avg": 0.2765
+    },
+    "Loss/Estimation Loss": {
+      "final_val": 0.0673,
+      "latest_10_avg": 0.0685
+    },
+    "Loss/Swap Loss": {
+      "final_val": 0.0603,
+      "latest_10_avg": 0.0603
+    },
+    "Loss/Actor Sym Loss": {
+      "final_val": 0.0,
+      "latest_10_avg": 0.0
+    },
+    "Loss/Critic Sym Loss": {
+      "final_val": 0.0,
+      "latest_10_avg": 0.0
+    },
+    "Loss/learning_rate": {
+      "final_val": 0.0,
+      "latest_10_avg": 0.0
+    },
+    "Policy/mean_noise_std": {
+      "final_val": 1.0619,
+      "latest_10_avg": 1.0618
+    },
+    "Perf/total_fps": {
+      "final_val": 78114.0,
+      "latest_10_avg": 78398.2
+    },
+    "Perf/collection time": {
+      "final_val": 2.0222,
+      "latest_10_avg": 2.0125
+    },
+    "Perf/learning_time": {
+      "final_val": 0.5995,
+      "latest_10_avg": 0.5998
+    },
+    "Train/mean_reward": {
+      "final_val": 3.9414,
+      "latest_10_avg": 5.1498
+    },
+    "Train/mean_episode_length": {
+      "final_val": 66.49,
+      "latest_10_avg": 78.799
+    },
+    "Train/mean_reward/time": {
+      "final_val": 3.9414,
+      "latest_10_avg": 5.1498
+    },
+    "Train/mean_episode_length/time": {
+      "final_val": 66.49,
+      "latest_10_avg": 78.799
+    }
+  },
+  "Aug04_22-47-15_elf3_crouch_v2": {
+    "Episode/rew_action_rate": {
+      "final_val": -0.3852,
+      "latest_10_avg": -0.3856
+    },
+    "Episode/rew_action_vanish": {
+      "final_val": -0.4852,
+      "latest_10_avg": -0.4868
+    },
+    "Episode/rew_ang_vel_xy": {
+      "final_val": -0.3968,
+      "latest_10_avg": -0.3914
+    },
+    "Episode/rew_contact_momentum": {
+      "final_val": -0.0142,
+      "latest_10_avg": -0.0142
+    },
+    "Episode/rew_deviation_ankle_joint": {
+      "final_val": -0.0107,
+      "latest_10_avg": -0.0106
+    },
+    "Episode/rew_deviation_hip_joint": {
+      "final_val": -0.0931,
+      "latest_10_avg": -0.0933
+    },
+    "Episode/rew_dof_acc": {
+      "final_val": -0.525,
+      "latest_10_avg": -0.5257
+    },
+    "Episode/rew_dof_pos_limits": {
+      "final_val": -0.0101,
+      "latest_10_avg": -0.0104
+    },
+    "Episode/rew_dof_vel": {
+      "final_val": -0.0285,
+      "latest_10_avg": -0.0285
+    },
+    "Episode/rew_dof_vel_limits": {
+      "final_val": -0.0004,
+      "latest_10_avg": -0.0004
+    },
+    "Episode/rew_feet_air_time": {
+      "final_val": -0.0006,
+      "latest_10_avg": -0.0007
+    },
+    "Episode/rew_feet_clearance": {
+      "final_val": -0.002,
+      "latest_10_avg": -0.0021
+    },
+    "Episode/rew_feet_contact_forces": {
+      "final_val": -0.0208,
+      "latest_10_avg": -0.0209
+    },
+    "Episode/rew_feet_distance_lateral": {
+      "final_val": -0.0166,
+      "latest_10_avg": -0.0167
+    },
+    "Episode/rew_feet_ground_parallel": {
+      "final_val": 0.0,
+      "latest_10_avg": 0.0
+    },
+    "Episode/rew_feet_parallel": {
+      "final_val": 0.0,
+      "latest_10_avg": 0.0
+    },
+    "Episode/rew_feet_slip": {
+      "final_val": -0.3749,
+      "latest_10_avg": -0.374
+    },
+    "Episode/rew_feet_stumble": {
+      "final_val": -0.0014,
+      "latest_10_avg": -0.0014
+    },
+    "Episode/rew_joint_power": {
+      "final_val": -0.1789,
+      "latest_10_avg": -0.1786
+    },
+    "Episode/rew_joint_tracking_error": {
+      "final_val": -0.1829,
+      "latest_10_avg": -0.1807
+    },
+    "Episode/rew_knee_distance_lateral": {
+      "final_val": -0.0003,
+      "latest_10_avg": -0.0003
+    },
+    "Episode/rew_lin_vel_z": {
+      "final_val": -0.1082,
+      "latest_10_avg": -0.1112
+    },
+    "Episode/rew_no_fly": {
+      "final_val": 0.6486,
+      "latest_10_avg": 0.6361
+    },
+    "Episode/rew_orientation": {
+      "final_val": -0.2562,
+      "latest_10_avg": -0.2628
+    },
+    "Episode/rew_smoothness": {
+      "final_val": -2.4937,
+      "latest_10_avg": -2.5004
+    },
+    "Episode/rew_stand_still": {
+      "final_val": -0.0441,
+      "latest_10_avg": -0.0425
+    },
+    "Episode/rew_termination": {
+      "final_val": -0.0144,
+      "latest_10_avg": -0.0145
+    },
+    "Episode/rew_torque_limits": {
+      "final_val": -0.0641,
+      "latest_10_avg": -0.0631
+    },
+    "Episode/rew_torques": {
+      "final_val": -0.0,
+      "latest_10_avg": -0.0
+    },
+    "Episode/rew_tracking_ang_vel": {
+      "final_val": 1.1191,
+      "latest_10_avg": 1.1185
+    },
+    "Episode/rew_tracking_base_height": {
+      "final_val": 3.294,
+      "latest_10_avg": 3.3014
+    },
+    "Episode/rew_tracking_x_vel": {
+      "final_val": 1.988,
+      "latest_10_avg": 1.9706
+    },
+    "Episode/rew_tracking_y_vel": {
+      "final_val": 1.5924,
+      "latest_10_avg": 1.5946
+    },
+    "Loss/value_function": {
+      "final_val": 0.2714,
+      "latest_10_avg": 0.2728
+    },
+    "Loss/surrogate": {
+      "final_val": 0.3035,
+      "latest_10_avg": 0.3038
+    },
+    "Loss/Estimation Loss": {
+      "final_val": 0.0554,
+      "latest_10_avg": 0.0554
+    },
+    "Loss/Swap Loss": {
+      "final_val": 0.0603,
+      "latest_10_avg": 0.0603
+    },
+    "Loss/Actor Sym Loss": {
+      "final_val": 0.0,
+      "latest_10_avg": 0.0
+    },
+    "Loss/Critic Sym Loss": {
+      "final_val": 0.0,
+      "latest_10_avg": 0.0
+    },
+    "Loss/learning_rate": {
+      "final_val": 0.0,
+      "latest_10_avg": 0.0
+    },
+    "Policy/mean_noise_std": {
+      "final_val": 1.1109,
+      "latest_10_avg": 1.1107
+    },
+    "Perf/total_fps": {
+      "final_val": 82826.0,
+      "latest_10_avg": 82901.6
+    },
+    "Perf/collection time": {
+      "final_val": 1.8741,
+      "latest_10_avg": 1.8739
+    },
+    "Perf/learning_time": {
+      "final_val": 0.5986,
+      "latest_10_avg": 0.5965
+    },
+    "Train/mean_reward": {
+      "final_val": 19.1002,
+      "latest_10_avg": 18.8808
+    },
+    "Train/mean_episode_length": {
+      "final_val": 265.22,
+      "latest_10_avg": 266.884
+    },
+    "Train/mean_reward/time": {
+      "final_val": 19.1002,
+      "latest_10_avg": 18.8808
+    },
+    "Train/mean_episode_length/time": {
+      "final_val": 265.22,
+      "latest_10_avg": 266.884
+    }
+  },
+  "Aug05_00-40-27_elf3_crouch_v2": {
+    "Episode/rew_action_rate": {
+      "final_val": -0.4315,
+      "latest_10_avg": -0.432
+    },
+    "Episode/rew_action_vanish": {
+      "final_val": -0.4758,
+      "latest_10_avg": -0.4746
+    },
+    "Episode/rew_ang_vel_xy": {
+      "final_val": -0.3448,
+      "latest_10_avg": -0.3494
+    },
+    "Episode/rew_contact_momentum": {
+      "final_val": -0.0164,
+      "latest_10_avg": -0.0164
+    },
+    "Episode/rew_deviation_ankle_joint": {
+      "final_val": -0.0099,
+      "latest_10_avg": -0.0102
+    },
+    "Episode/rew_deviation_hip_joint": {
+      "final_val": -0.1103,
+      "latest_10_avg": -0.1136
+    },
+    "Episode/rew_dof_acc": {
+      "final_val": -0.5913,
+      "latest_10_avg": -0.5944
+    },
+    "Episode/rew_dof_pos_limits": {
+      "final_val": -0.008,
+      "latest_10_avg": -0.0081
+    },
+    "Episode/rew_dof_vel": {
+      "final_val": -0.0324,
+      "latest_10_avg": -0.0325
+    },
+    "Episode/rew_dof_vel_limits": {
+      "final_val": -0.0006,
+      "latest_10_avg": -0.0006
+    },
+    "Episode/rew_feet_air_time": {
+      "final_val": -0.0007,
+      "latest_10_avg": -0.0007
+    },
+    "Episode/rew_feet_clearance": {
+      "final_val": -0.0016,
+      "latest_10_avg": -0.0017
+    },
+    "Episode/rew_feet_contact_forces": {
+      "final_val": -0.0226,
+      "latest_10_avg": -0.0226
+    },
+    "Episode/rew_feet_distance_lateral": {
+      "final_val": -0.0131,
+      "latest_10_avg": -0.0133
+    },
+    "Episode/rew_feet_ground_parallel": {
+      "final_val": 0.0,
+      "latest_10_avg": 0.0
+    },
+    "Episode/rew_feet_parallel": {
+      "final_val": 0.0,
+      "latest_10_avg": 0.0
+    },
+    "Episode/rew_feet_slip": {
+      "final_val": -0.3997,
+      "latest_10_avg": -0.3994
+    },
+    "Episode/rew_feet_stumble": {
+      "final_val": -0.0021,
+      "latest_10_avg": -0.003
+    },
+    "Episode/rew_joint_power": {
+      "final_val": -0.2009,
+      "latest_10_avg": -0.2015
+    },
+    "Episode/rew_joint_tracking_error": {
+      "final_val": -0.1948,
+      "latest_10_avg": -0.1961
+    },
+    "Episode/rew_knee_distance_lateral": {
+      "final_val": -0.0032,
+      "latest_10_avg": -0.0032
+    },
+    "Episode/rew_lin_vel_z": {
+      "final_val": -0.0915,
+      "latest_10_avg": -0.0914
+    },
+    "Episode/rew_no_fly": {
+      "final_val": 0.6463,
+      "latest_10_avg": 0.6495
+    },
+    "Episode/rew_orientation": {
+      "final_val": -0.1698,
+      "latest_10_avg": -0.1731
+    },
+    "Episode/rew_smoothness": {
+      "final_val": -2.6987,
+      "latest_10_avg": -2.7031
+    },
+    "Episode/rew_stand_still": {
+      "final_val": -0.0412,
+      "latest_10_avg": -0.044
+    },
+    "Episode/rew_termination": {
+      "final_val": -0.0025,
+      "latest_10_avg": -0.0032
+    },
+    "Episode/rew_torque_limits": {
+      "final_val": -0.0941,
+      "latest_10_avg": -0.0948
+    },
+    "Episode/rew_torques": {
+      "final_val": -0.0,
+      "latest_10_avg": -0.0
+    },
+    "Episode/rew_tracking_ang_vel": {
+      "final_val": 1.0,
+      "latest_10_avg": 0.9933
+    },
+    "Episode/rew_tracking_base_height": {
+      "final_val": 3.5985,
+      "latest_10_avg": 3.5924
+    },
+    "Episode/rew_tracking_x_vel": {
+      "final_val": 2.5056,
+      "latest_10_avg": 2.491
+    },
+    "Episode/rew_tracking_y_vel": {
+      "final_val": 1.6432,
+      "latest_10_avg": 1.6285
+    },
+    "Loss/value_function": {
+      "final_val": 0.2678,
+      "latest_10_avg": 0.2646
+    },
+    "Loss/surrogate": {
+      "final_val": 0.3184,
+      "latest_10_avg": 0.318
+    },
+    "Loss/Estimation Loss": {
+      "final_val": 0.0474,
+      "latest_10_avg": 0.0475
+    },
+    "Loss/Swap Loss": {
+      "final_val": 0.0602,
+      "latest_10_avg": 0.0602
+    },
+    "Loss/Actor Sym Loss": {
+      "final_val": 0.0,
+      "latest_10_avg": 0.0
+    },
+    "Loss/Critic Sym Loss": {
+      "final_val": 0.0,
+      "latest_10_avg": 0.0
+    },
+    "Loss/learning_rate": {
+      "final_val": 0.0,
+      "latest_10_avg": 0.0
+    },
+    "Policy/mean_noise_std": {
+      "final_val": 1.2048,
+      "latest_10_avg": 1.2048
+    },
+    "Perf/total_fps": {
+      "final_val": 81825.0,
+      "latest_10_avg": 82289.0
+    },
+    "Perf/collection time": {
+      "final_val": 1.9003,
+      "latest_10_avg": 1.8902
+    },
+    "Perf/learning_time": {
+      "final_val": 0.6026,
+      "latest_10_avg": 0.5986
+    },
+    "Train/mean_reward": {
+      "final_val": 57.8888,
+      "latest_10_avg": 57.1193
+    },
+    "Train/mean_episode_length": {
+      "final_val": 809.38,
+      "latest_10_avg": 792.775
+    },
+    "Train/mean_reward/time": {
+      "final_val": 57.8888,
+      "latest_10_avg": 57.1193
+    },
+    "Train/mean_episode_length/time": {
+      "final_val": 809.38,
+      "latest_10_avg": 792.775
+    }
+  }
+}

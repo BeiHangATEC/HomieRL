@@ -1,0 +1,59 @@
+   170	    foot_values = [v for r in records for v in (r["left_foot_z"], r["right_foot_z"]) if v is not None]
+   171	    gravity_tilt = [r["projected_gravity_xy_norm"] for r in records]
+   172	    dof_vel_norm = [r["dof_vel_norm"] for r in records]
+   173	    feet_lat = [r["feet_lateral_distance"] for r in records if r["feet_lateral_distance"] is not None]
+   174	    knee_lat = [r["knee_lateral_distance"] for r in records if r["knee_lateral_distance"] is not None]
+   175	
+   176	    tail = min(args.tail_steps, len(records))
+   177	    ankle_sole_distance = getattr(env_cfg.asset, "ankle_sole_distance", 0.0)
+   178	    summary = {
+   179	        "task": args.task,
+   180	        "num_records": len(records),
+   181	        "warmup_steps": args.warmup_steps,
+   182	        "tail_steps": tail,
+   183	        "configured_init_root_z": env_cfg.init_state.pos[2],
+   184	        "configured_base_height_target": env_cfg.rewards.base_height_target,
+   185	        "configured_ankle_sole_distance": ankle_sole_distance,
+   186	        "root_z_tail_mean": _mean_tail(root_values, tail),
+   187	        "upper_body_z_tail_mean": _mean_tail(upper_values, tail),
+   188	        "imu_z_tail_mean": _mean_tail(imu_values, tail),
+   189	        "foot_z_tail_mean": _mean_tail(foot_values, tail * 2),
+   190	        "root_minus_foot_z_tail_mean": None,
+   191	        "reward_base_height_tail_mean": None,
+   192	        "projected_gravity_xy_norm_tail_mean": _mean_tail(gravity_tilt, tail),
+   193	        "dof_vel_norm_tail_mean": _mean_tail(dof_vel_norm, tail),
+   194	        "feet_lateral_distance_tail_mean": _mean_tail(feet_lat, tail),
+   195	        "knee_lateral_distance_tail_mean": _mean_tail(knee_lat, tail),
+   196	        "dof_names": list(env.dof_names),
+   197	        "body_names": list(env.body_names),
+   198	        "default_joint_angles": dict(env_cfg.init_state.default_joint_angles),
+   199	        "last_record": records[-1] if records else None,
+   200	    }
+   201	    if summary["root_z_tail_mean"] is not None and summary["foot_z_tail_mean"] is not None:
+   202	        summary["root_minus_foot_z_tail_mean"] = summary["root_z_tail_mean"] - summary["foot_z_tail_mean"]
+   203	        summary["reward_base_height_tail_mean"] = summary["root_minus_foot_z_tail_mean"] + ankle_sole_distance
+   204	
+   205	    output = Path(args.output)
+   206	    output.parent.mkdir(parents=True, exist_ok=True)
+   207	    output.write_text(json.dumps(summary, indent=2) + "\n")
+   208	    print(json.dumps(summary, indent=2))
+   209	
+   210	
+   211	if __name__ == "__main__":
+   212	    has_task_arg = any(arg == "--task" or arg.startswith("--task=") for arg in sys.argv[1:])
+   213	    parser = argparse.ArgumentParser(add_help=False)
+   214	    parser.add_argument("--steps", type=int, default=800)
+   215	    parser.add_argument("--warmup_steps", type=int, default=400)
+   216	    parser.add_argument("--tail_steps", type=int, default=200)
+   217	    parser.add_argument(
+   218	        "--output",
+   219	        default=str(Path(LEGGED_GYM_ROOT_DIR) / "logs/elf3_dof31/stand_height_measurement.json"),
+   220	    )
+   221	    known, remaining = parser.parse_known_args()
+   222	    sys.argv = [sys.argv[0], *remaining]
+   223	    gym_args = get_args()
+   224	    if not has_task_arg:
+   225	        gym_args.task = "elf3_dof31"
+   226	    for key, value in vars(known).items():
+   227	        setattr(gym_args, key, value)
+   228	    measure(gym_args)

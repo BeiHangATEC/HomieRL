@@ -1,0 +1,182 @@
+root@gpufree-container:~/HomieRL_elf3_crouch_training_v1_20260802# /opt/conda/envs/isaacgym/bin/python legged_gym/legged_gym/scripts/train.py \
+  --task elf3_dof31 \
+  --num_envs 2 \
+  --max_iterations 1 \
+  --headless \
+  --run_name elf3_crouch_v1_smoke \
+  --rl_device cuda:0 \
+  --sim_device cuda:0
+Importing module 'gym_38' (/root/isaacgym/python/isaacgym/_bindings/linux-x86_64/gym_38.so)
+Setting GYM_USD_PLUG_INFO_PATH to /root/isaacgym/python/isaacgym/_bindings/linux-x86_64/usd/plugInfo.json
+PyTorch version 2.4.1+cu121
+Device count 1
+/root/isaacgym/python/isaacgym/_bindings/src/gymtorch
+Using /root/.cache/torch_extensions/py38_cu121 as PyTorch extensions root...
+Emitting ninja build file /root/.cache/torch_extensions/py38_cu121/gymtorch/build.ninja...
+Building extension module gymtorch...
+Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+ninja: no work to do.
+Loading extension module gymtorch...
+Setting seed: 1
+Not connected to PVD
++++ Using GPU PhysX
+Physics Engine: PhysX
+Physics Device: cuda:0
+GPU Pipeline: enabled
+/opt/conda/envs/isaacgym/lib/python3.8/site-packages/torch/functional.py:513: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3609.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Mass of body 0: 11.663861274719238 (before randomization)
+Mass of body 1: 0.3766513764858246 (before randomization)
+Mass of body 2: 1.5742567777633667 (before randomization)
+Mass of body 3: 1.0000000116860974e-07 (before randomization)
+Mass of body 4: 1.0000000116860974e-07 (before randomization)
+Mass of body 5: 1.0000000116860974e-07 (before randomization)
+Mass of body 6: 0.9974735379219055 (before randomization)
+Mass of body 7: 0.1393941342830658 (before randomization)
+Mass of body 8: 1.6734989881515503 (before randomization)
+Mass of body 9: 0.10206150263547897 (before randomization)
+Mass of body 10: 1.249457597732544 (before randomization)
+Mass of body 11: 0.5682878494262695 (before randomization)
+Mass of body 12: 0.09977740049362183 (before randomization)
+Mass of body 13: 0.997473418712616 (before randomization)
+Mass of body 14: 0.1393941342830658 (before randomization)
+Mass of body 15: 1.6734983921051025 (before randomization)
+Mass of body 16: 0.10206150263547897 (before randomization)
+Mass of body 17: 1.249457597732544 (before randomization)
+Mass of body 18: 0.5682878494262695 (before randomization)
+Mass of body 19: 0.09977740049362183 (before randomization)
+Mass of body 20: 1.0000000116860974e-07 (before randomization)
+Mass of body 21: 0.0662032812833786 (before randomization)
+Mass of body 22: 0.24344944953918457 (before randomization)
+Mass of body 23: 5.269381523132324 (before randomization)
+Mass of body 24: 1.7466384172439575 (before randomization)
+Mass of body 25: 0.23202192783355713 (before randomization)
+Mass of body 26: 2.9433205127716064 (before randomization)
+Mass of body 27: 1.8699121475219727 (before randomization)
+Mass of body 28: 0.01268984004855156 (before randomization)
+Mass of body 29: 0.37980157136917114 (before randomization)
+Mass of body 30: 1.7466384172439575 (before randomization)
+Mass of body 31: 0.23202192783355713 (before randomization)
+Mass of body 32: 2.9433205127716064 (before randomization)
+Mass of body 33: 1.869913935661316 (before randomization)
+Mass of body 34: 0.01268984004855156 (before randomization)
+Mass of body 35: 0.37980157136917114 (before randomization)
+Total mass 43.22247601067343 (before randomization)
+Joint 0: head_z_joint
+Joint 1: head_y_joint
+Joint 2: l_shoulder_y_joint
+Joint 3: l_shoulder_x_joint
+Joint 4: l_shoulder_z_joint
+Joint 5: l_elbow_y_joint
+Joint 6: l_wrist_x_joint
+Joint 7: l_wrist_y_joint
+Joint 8: l_wrist_z_joint
+Joint 9: r_shoulder_y_joint
+Joint 10: r_shoulder_x_joint
+Joint 11: r_shoulder_z_joint
+Joint 12: r_elbow_y_joint
+Joint 13: r_wrist_x_joint
+Joint 14: r_wrist_y_joint
+Joint 15: r_wrist_z_joint
+Joint 16: waist_y_joint
+Joint 17: waist_x_joint
+Joint 18: waist_z_joint
+Joint 19: l_hip_y_joint
+Joint 20: l_hip_x_joint
+Joint 21: l_hip_z_joint
+Joint 22: l_knee_y_joint
+Joint 23: l_ankle_y_joint
+Joint 24: l_ankle_x_joint
+Joint 25: r_hip_y_joint
+Joint 26: r_hip_x_joint
+Joint 27: r_hip_z_joint
+Joint 28: r_knee_y_joint
+Joint 29: r_ankle_y_joint
+Joint 30: r_ankle_x_joint
+Action min: tensor([[ -6.2800,  -3.1400, -11.5192,  -1.3963, -11.5192,  -3.8397, -11.5192,
+          -5.2360,  -3.1416, -11.5192, -12.2172, -11.5192,  -3.8397, -11.5192,
+          -5.2360,  -3.1416,  -2.0944,  -1.0472, -11.5192, -11.1192,  -1.9548,
+         -11.5192,  -1.5491,  -2.6906,  -1.3963, -11.1192, -12.2172, -11.5192,
+          -1.5491,  -2.6906,  -1.3963]], device='cuda:0')
+Action max: tensor([[ 6.2800,  3.1400, 11.5192, 12.2172, 11.5192,  6.6324, 11.5192,  5.2360,
+          3.1416, 11.5192,  1.3963, 11.5192,  6.6324, 11.5192,  5.2360,  3.1416,
+          2.0944,  1.0472, 11.5192, 11.9192, 12.2172, 11.5192,  9.2720,  3.9416,
+          1.3963, 11.9192,  1.9548, 11.5192,  9.2720,  3.9416,  1.3963]],
+       device='cuda:0')
+Actor MLP: Sequential(
+  (0): Linear(in_features=119, out_features=512, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=512, out_features=256, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=256, out_features=256, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=256, out_features=12, bias=True)
+)
+Critic MLP: Sequential(
+  (0): Linear(in_features=87, out_features=512, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=512, out_features=256, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=256, out_features=256, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=256, out_features=1, bias=True)
+)
+Estimator: Sequential(
+  (0): Linear(in_features=504, out_features=256, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=256, out_features=256, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=256, out_features=35, bias=True)
+)
+################################################################################
+                         Learning iteration 0/1                         
+
+                       Computation: 90 steps/s (collection: 0.808s, learning 0.299s)
+               Value function loss: 0.0170
+                    Surrogate loss: 0.2085
+                   Estimation loss: 0.2815
+                         Swap loss: 0.0646
+               Mean actor sym loss: 0.0000
+              Mean critic sym loss: 0.0000
+             Mean action noise std: 1.00
+      Mean episode rew_action_rate: 0.0000
+    Mean episode rew_action_vanish: 0.0000
+       Mean episode rew_ang_vel_xy: 0.0000
+ Mean episode rew_contact_momentum: 0.0000
+Mean episode rew_deviation_ankle_joint: 0.0000
+Mean episode rew_deviation_hip_joint: 0.0000
+Mean episode rew_deviation_knee_joint: 0.0000
+          Mean episode rew_dof_acc: 0.0000
+   Mean episode rew_dof_pos_limits: 0.0000
+          Mean episode rew_dof_vel: 0.0000
+   Mean episode rew_dof_vel_limits: 0.0000
+    Mean episode rew_feet_air_time: 0.0000
+   Mean episode rew_feet_clearance: 0.0000
+Mean episode rew_feet_contact_forces: 0.0000
+Mean episode rew_feet_distance_lateral: 0.0000
+Mean episode rew_feet_ground_parallel: 0.0000
+    Mean episode rew_feet_parallel: 0.0000
+        Mean episode rew_feet_slip: 0.0000
+     Mean episode rew_feet_stumble: 0.0000
+      Mean episode rew_joint_power: 0.0000
+Mean episode rew_joint_tracking_error: 0.0000
+Mean episode rew_knee_distance_lateral: 0.0000
+        Mean episode rew_lin_vel_z: 0.0000
+           Mean episode rew_no_fly: 0.0000
+      Mean episode rew_orientation: 0.0000
+       Mean episode rew_smoothness: 0.0000
+      Mean episode rew_stand_still: 0.0000
+      Mean episode rew_termination: 0.0000
+    Mean episode rew_torque_limits: 0.0000
+          Mean episode rew_torques: 0.0000
+ Mean episode rew_tracking_ang_vel: 0.0000
+Mean episode rew_tracking_base_height: 0.0000
+   Mean episode rew_tracking_x_vel: 0.0000
+   Mean episode rew_tracking_y_vel: 0.0000
+        Mean episode max_command_x: 1.0000
+Mean episode action_curriculum_ratio: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 100
+                    Iteration time: 1.11s
+                        Total time: 1.11s
+                               ETA: 1.1s

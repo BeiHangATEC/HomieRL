@@ -1,0 +1,4 @@
+包版本: elf3-crouch-training-v1
+打包日期: 2026-08-02
+源目录: /home/wyg/HomieRL
+关键修复概述: ELF3 31-DOF 混合控制按 action_joints 关节名称建立索引映射；12 维腿部策略动作映射到对应腿关节，避免依赖错误的固定 DOF 顺序，其余 19 关节保持位置控制。

@@ -1,0 +1,80 @@
+3:  <link name="torso_link">
+5:      <origin xyz="0.00248104 -0.00011985 -0.0213511" rpy="0 0 0"/>
+10:      <origin xyz="0 0 0" rpy="0 0 0"/>
+19:      <origin xyz="0 0 0" rpy="0 0 0"/>
+26:  <link name="waist_y_link">
+28:      <origin xyz="0 0 0" rpy="0 0 0"/>
+33:      <origin xyz="0 0 0" rpy="0 0 0"/>
+42:      <origin xyz="0 0 0" rpy="0 0 0"/>
+48:  <joint name="waist_y_joint" type="revolute">
+49:    <origin xyz="0 0 -0.2265" rpy="0 0 0"/>
+50:    <parent link="torso_link"/>
+51:    <child link="waist_y_link"/>
+55:  <link name="waist_x_link">
+57:      <origin xyz="-0.00930435 0 -0.01487864" rpy="0 0 0"/>
+62:      <origin xyz="0 0 0" rpy="0 0 0"/>
+71:      <origin xyz="0 0 0" rpy="0 0 0"/>
+77:  <joint name="waist_x_joint" type="revolute">
+78:    <origin xyz="0 0 0" rpy="0 0 0"/>
+79:    <parent link="waist_y_link"/>
+80:    <child link="waist_x_link"/>
+84:  <link name="waist_z_link">
+86:      <origin xyz="0.00010085 -0.00035077 -0.12669367" rpy="0 0 0"/>
+91:      <origin xyz="0 0 0" rpy="0 0 0"/>
+100:      <origin xyz="0 0 0" rpy="0 0 0"/>
+106:  <joint name="waist_z_joint" type="revolute">
+107:    <origin xyz="0 0 0" rpy="0 0 0"/>
+108:    <parent link="waist_x_link"/>
+109:    <child link="waist_z_link"/>
+113:  <link name="l_hip_y_link">
+115:      <origin xyz="-0.02327137 -0.0044378 0.00220394" rpy="0 0 0"/>
+120:      <origin xyz="0 0 0" rpy="0 0 0"/>
+129:      <origin xyz="0 0 0" rpy="0 0 0"/>
+135:  <joint name="l_hip_y_joint" type="revolute">
+136:    <origin xyz="0 0.136 -0.156" rpy="0 0 0"/>
+137:    <parent link="waist_z_link"/>
+138:    <child link="l_hip_y_link"/>
+142:  <link name="l_hip_x_link">
+144:      <origin xyz="0.01788252 0 -0.03683802" rpy="0 0 0"/>
+149:      <origin xyz="0 0 0" rpy="0 0 0"/>
+158:      <origin xyz="0 0 0" rpy="0 0 0"/>
+164:  <joint name="l_hip_x_joint" type="revolute">
+165:    <origin xyz="0 0 0" rpy="0 0 0"/>
+166:    <parent link="l_hip_y_link"/>
+167:    <child link="l_hip_x_link"/>
+171:  <link name="l_hip_z_link">
+173:      <origin xyz="0.00212894 -0.01021633 -0.23364887" rpy="0 0 0"/>
+178:      <origin xyz="0 0 0" rpy="0 0 0"/>
+187:      <origin xyz="0 0 0" rpy="0 0 0"/>
+193:  <joint name="l_hip_z_joint" type="revolute">
+194:    <origin xyz="0 0 0" rpy="0 0 0"/>
+195:    <parent link="l_hip_x_link"/>
+196:    <child link="l_hip_z_link"/>
+200:  <link name="l_knee_y_link">
+202:      <origin xyz="0.00668026 0.00374771 -0.14451634" rpy="0 0 0"/>
+207:      <origin xyz="0 0 0" rpy="0 0 0"/>
+216:      <origin xyz="0 0 0" rpy="0 0 0"/>
+222:  <joint name="l_knee_y_joint" type="revolute">
+223:    <origin xyz="0 0 -0.32" rpy="0 0 0"/>
+224:    <parent link="l_hip_z_link"/>
+225:    <child link="l_knee_y_link"/>
+229:  <link name="l_ankle_y_link">
+231:      <origin xyz="0 0 0" rpy="0 0 0"/>
+236:      <origin xyz="0 0 0" rpy="0 0 0"/>
+245:      <origin xyz="0 0 0" rpy="0 0 0"/>
+251:  <joint name="l_ankle_y_joint" type="revolute">
+252:    <origin xyz="0 0 -0.32" rpy="0 0 0"/>
+253:    <parent link="l_knee_y_link"/>
+254:    <child link="l_ankle_y_link"/>
+258:  <link name="l_ankle_x_link">
+260:      <origin xyz="0.020935 0 -0.02438162" rpy="0 0 0"/>
+265:      <origin xyz="0 0 0" rpy="0 0 0"/>
+274:      <origin xyz="0 0 0" rpy="0 0 0"/>
+280:  <joint name="l_ankle_x_joint" type="revolute">
+281:    <origin xyz="0 0 0" rpy="0 0 0"/>
+282:    <parent link="l_ankle_y_link"/>
+283:    <child link="l_ankle_x_link"/>
+287:  <link name="r_hip_y_link">
+289:      <origin xyz="-0.02327137 0.00327913 0.00019704" rpy="0 0 0"/>
+294:      <origin xyz="0 0 0" rpy="0 0 0"/>
+303:      <origin xyz="0 0 0" rpy="0 0 0"/>
